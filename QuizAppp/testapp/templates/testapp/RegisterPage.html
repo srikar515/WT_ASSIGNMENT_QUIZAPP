@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+
+<form method="post" action="{% url 'testapp:user_register' %}">
+  <div class="container">
+      <div class="jumbotron">
+    <h1>Register</h1>
+      {% csrf_token %}
+    <label for="Username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required><br/><br/>
+
+    <label for="First Name"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="First_Name" required><br/><br/>
+
+          <label for="Last Name"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="Last_Name" required><br/><br/>
+
+
+          <label for="email"><b>Email</b>]</label>
+      <input type="text" placeholder="Enter Email" name="email" required><br/><br/>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br/><br/>
+
+    <label for="psw-repeat"><b>Confirm Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required><br/></br>
+
+
+      <form>
+          <input type="radio" name="gender" value="male" checked> Male &emsp;
+          <input type="radio" name="gender" value="female"> Female<br>
+</form><br/>
+          <input type="checkbox" name="accept" value="accept" required>I accept terms and conditions &emsp;&emsp;
+
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+  </div>
+</form>
+
+
+</body>
+</html>
